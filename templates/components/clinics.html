@@ -1,0 +1,65 @@
+{% load i18n %}
+{% load static %}
+
+
+<!-- ...::: Start Doctors Team Display Section :::... -->
+<div id="clinics"
+     class="doctors-team-display section-inner-padding-200 section-top-gap-200 section-inner-bg pos-relative overflow-hidden">
+    <div class="box-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Start Section Content -->
+                    <div class="secton-content section-shape text-center">
+                        <span class="section-tag">{% trans "Klinik" %}</span>
+                        <h2 class="section-title">
+                            <span class="title-bold">Jineart</span>
+                            <br>
+                            <span class="title-normal">{% trans "Kliniği Keşfedin!" %}</span>
+                        </h2>
+                    </div>
+                    <!-- End Section Content -->
+                </div>
+            </div>
+            <!-- Start Doctors Team Area -->
+            <div class="doctors-team-area section-top-gap-150">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Start Doctor Team Slider -->
+                        <div class="doctors-team-slider default-slider-nav pos-relative">
+                            <!-- Slider main container -->
+                            <div class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    {% for clinicsimage in clinicsimage_list %}
+                                        <!-- Start Doctors Team Single Item -->
+                                        <div class="doctors-team-single-item swiper-slide">
+                                            <a class="images img-responsive">
+                                                <img src="{{ clinicsimage.image.url }}"
+                                                     alt="">
+                                            </a>
+                                        </div>
+                                        <!-- End Doctors Team Single Item -->
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <!-- End Doctor Team Slider -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Doctors Team Area -->
+        </div>
+        <!-- Start Doctor Shape -->
+        <div class="doctor-shape doctor-shape-1"></div>
+        <div class="doctor-shape doctor-shape-2"></div>
+        <div class="doctor-shape doctor-shape-3"></div>
+        <div class="doctor-shape doctor-shape-4"></div>
+        <!-- End Doctor Shape -->
+    </div>
+</div>
+<!-- ...::: End Doctors Team Display Section :::... -->

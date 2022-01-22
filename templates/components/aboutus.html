@@ -1,0 +1,53 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ...::: Start About Display Section :::... -->
+<div id="about" class="about-display-section section-top-gap-200 section-fluid-185">
+    <div class="box-wrapper">
+        <div class="container ">
+            <div class="row">
+                <div class="col-12 d-flex flex-column flex-md-row align-items-center">
+                    <div class="about-display-img">
+                        <img class="img-fluid animate-top-bottom"
+                             src="{% static 'assets/images/background/about-display-img.png' %}" alt="">
+                    </div>
+                    <!-- Start About Content -->
+                    <div class="about-content">
+                        <!-- Start Section Content -->
+                        <div class="secton-content">
+                            <span class="section-tag">{% trans "Hakkımızda" %}</span>
+                            <h2 class="section-title">
+                                <span class="title-bold">{% trans "Black Cap Media'da" %}</span>
+                                <span class="title-normal">{% trans "Müşterilerimize özel dijital iletişim stratejileri ve çözümleri geliştiriyoruz!" %}</span>
+                            </h2>
+                        </div>
+                        <h5>
+                            {% blocktrans trimmed %}
+                                Yaratıcı fikirlerle güçlendirdiğimiz dijital, sosyal ve prodüksiyon çözümlerimiz ile,
+                                müşterilerimizin kitleleri ile daha iyi bir iletişim kurabilmesini hedefliyoruz.
+                            {% endblocktrans %}
+                        </h5>
+                        <p>
+                            {% blocktrans trimmed %}
+                                Black Cap Digital çözümlerimiz ile dijital pazarlama yolculugunuzu kurguluyor,
+                                müsterilerinizin beklentilerini karsilayacak müsteri deneyimini tasarliyor, hayata
+                                geciriyor ve takip ediyoruz. Black Cap Social ile hedef kitlenizi dinliyor,
+                                beklentilerine
+                                özel stratejiler gelistiriyor, etkilesime geciyor ve sosyal medya kanallarinizi
+                                güçlendiriyoruz. Black Cap Production ile markanizi ekranlara tasiyor ve ses
+                                getirecek tanitim filmleri, video klipler, fotograf cekimi ve diger prodüksiyon
+                                hizmetleri sunuyoruz.
+                            {% endblocktrans %}
+                        </p>
+                        <a href="{% url 'home' %}#contact"
+                           class="btn btn-lg btn-default-outline btn-animate icon-space-left"><span> {% trans "İletişime Geç" %} <i
+                                class="icofont-double-right"></i></span></a>
+                        <!-- End Section Content -->
+                    </div>
+                    <!-- End About Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ...::: End About Display Section :::... -->

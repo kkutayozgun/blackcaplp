@@ -1,0 +1,48 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ...::: Start Contact Banner Display Section :::... -->
+<div id="contact" class="contact-banner-display-section section-top-gap-200">
+    <div class="box-wrapper">
+        <div class="container">
+            <!-- Start Contact Banner Area -->
+            <div class="contact-banner-area">
+                <div class="content">
+                    <h3 class="title">
+                        {% trans "Size nasıl yardımcı olabiliriz?" %}
+                    </h3>
+                    <p class="text">
+                        {% blocktrans trimmed %}
+                            Annelik yolculuğunuz boyunca merak ettikleriniz, bebeğinizin doğum öncesi, doğum
+                            esnasındaki sağlığı ve çok daha fazlası hakkında bilgi almak için bize
+                            ulaşabilirsiniz.
+                        {% endblocktrans %}
+                    </p>
+                    <a href="{% include 'variables/whatsapp_link.html' %}"
+                       class="btn btn-animate btn-icon" target="_blank">
+                        <span><i class="icofont-whatsapp"></i></span>
+                    </a>
+                    <a href="tel:{% include 'variables/phone-link.html' %}"
+                       class="btn btn-animate btn-icon" target="_blank">
+                        <span><i class="icofont-phone"></i></span>
+                    </a>
+                    <a href="mailto:{% include 'variables/email.html' %}"
+                       class="btn btn-animate btn-icon" target="_blank">
+                        <span><i class="icofont-envelope"></i></span>
+                    </a>
+                </div>
+                <div class="image-1 ">
+                    <img class="img-fluid animate-left-right"
+                         src="{% static 'assets/images/background/contact-banner-img-1.png' %}"
+                         alt="">
+                </div>
+                <div class="image-2">
+                    <img src="{% static 'assets/images/background/contact-banner-img-2.png' %}" alt="">
+                </div>
+            </div>
+            <!-- End Contact Banner Area -->
+
+        </div>
+    </div>
+</div>
+<!-- ...::: End Contat Banner Display Section :::... -->

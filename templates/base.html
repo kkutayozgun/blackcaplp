@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+{% load homeseo %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    {% block meta %}
+        {% get_home as home %}
+        {% include 'components/meta.html' with obj=home %}
+    {% endblock %}
+
+    <!-- ::::::::::::::Favicon icon::::::::::::::-->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" type="image/png">
+
+    <!-- ::::::::::::::All CSS Files here :::::::::::::: -->
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/icofont.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/jquery-ui.min.css' %}">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/venobox.min.css' %}">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/whatsappicon.css' %}">
+
+</head>
+
+<body>
+<main class="main-wrapper">
+
+    {% include "components/header.html" %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include "components/contact-section.html" %}
+
+    {% include "components/footer.html" %}
+
+
+    <a id="whatsappBtn" class="whatsapp-icon" href="{% include 'variables/whatsapp_link.html' %}" target="_blank"><span
+            class="icofont-whatsapp"></span></a>
+        <!-- material-scrolltop button -->
+    <a href="#" class="material-scrolltop" type="button"></a>
+
+</main>
+<!-- ::::::::::::::All JS Files here :::::::::::::: -->
+<!-- Global Vendor, plugins JS -->
+<script src="{% static 'assets/js/vendor/modernizr-3.11.2.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-3.3.3.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-ui.min.js' %}"></script>
+
+<!--Plugins JS-->
+<script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/circle-progress.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/ajax-mail.js' %}"></script>
+<script src="{% static 'assets/js/plugins/venobox.min.js' %}"></script>
+<script src="{% static 'assets/js/plugins/material-scrolltop.js' %}"></script>
+
+
+<!-- Use the minified version files listed below for better performance and remove the files listed above -->
+<!-- <script src="assets/js/vendor/vendor.min.js"></script>
+<script src="assets/js/plugins/plugins.min.js"></script> -->
+
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

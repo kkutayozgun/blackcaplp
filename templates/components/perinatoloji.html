@@ -1,0 +1,82 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ...::: Start Service Display Section :::... -->
+<div id="perinatoloji" class="service-display-section section-top-gap-200 section-fluid-185">
+    <div class="box-wrapper section-inner-padding-145 section-inner-bg container-border-radius">
+        <div class="container">
+            <div class="row align-items-center justify-content-xl-evenly justify-content-xxl-between">
+                <div class="col-xl-5 col-lg-5">
+                    <!-- Start Section Content -->
+                    <div class="secton-content">
+                        <span class="section-tag">{% trans "Perinatoloji" %}</span>
+                        <h2 class="section-title">
+                            <span class="title-bold">Anne-baba adayının ve ailelerinin</span>
+                            <span class="title-normal">en iyi kararları vermelerine yardımcı olmak için tüm uygun seçenekleri tartışıyoruz.</span>
+                        </h2>
+                        <a href="{% url 'home' %}#contact"
+                           class="btn btn-lg btn-default-outline btn-animate icon-space-left">
+                            <span>
+                                {% trans "İletişime geçin" %}
+                                <i class="icofont-double-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- End Section Content -->
+                </div>
+                <div class="col-xl-6 col-lg-7">
+                    <!-- Start Service Display List -->
+                    <div class="service-display-list">
+
+
+                        <ul class="list-item">
+                            <h3 class="mb-3">{% trans "Size hangi konuda yardımcı olabiliriz?" %}</h3>
+                            <!-- Start Single Service List -->
+                            <li>
+                                <a href="{% include 'variables/whatsapp_link.html' %}">
+                                    <div class="icon-image"><img
+                                            src="{% static 'assets/images/icons/service-list-icon-1.svg' %}"
+                                            alt=""></div>
+                                    <div class="text">{% trans 'Yüksek Riskli Gebelikler' %}</div>
+                                </a>
+                            </li>
+                            <!-- End Single Service List -->
+                            <!-- Start Single Service List -->
+                            <li>
+                                <a href="{% include 'variables/whatsapp_link.html' %}">
+                                    <div class="icon-image"><img
+                                            src="{% static 'assets/images/icons/service-list-icon-1.svg' %}"
+                                            alt=""></div>
+                                    <div class="text">{% trans "Prenetal Genetik" %}</div>
+                                </a>
+                            </li>
+                            <!-- End Single Service List -->
+                            <!-- Start Single Service List -->
+                            <li>
+                                <a href="{% include 'variables/whatsapp_link.html' %}">
+                                    <div class="icon-image"><img
+                                            src="{% static 'assets/images/icons/service-list-icon-2.svg' %}"
+                                            alt=""></div>
+                                    <div class="text">{% trans "Özel Sağlık Sorunları" %}</div>
+                                </a>
+                            </li>
+                            <!-- End Single Service List -->
+                            <!-- Start Single Service List -->
+                            <li>
+                                <a href="{% include 'variables/whatsapp_link.html' %}">
+                                    <div class="icon-image"><img
+                                            src="{% static 'assets/images/icons/service-list-icon-3.svg' %}"
+                                            alt=""></div>
+                                    <div class="text">{% trans "Komplikasyon Yönetimi" %}</div>
+                                </a>
+                            </li>
+                            <!-- End Single Service List -->
+                        </ul>
+                    </div>
+                    <!-- End Service Display List -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ...::: End Service Display Section :::... -->

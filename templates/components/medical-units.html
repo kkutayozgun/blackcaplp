@@ -1,0 +1,77 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ...::: Start Cases Display Section :::... -->
+<div id="medical-units" class="cases-display-section section-fluid-185 section-top-gap-200">
+    <div class="box-wrapper">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-12 d-flex flex-md-row flex-column align-items-center justify-content-between">
+                    <!-- Start Section Content -->
+                    <div class="secton-content">
+                        <span class="section-tag">{% trans "Tıbbi Birimler" %}</span>
+                        <h2 class="section-title">
+                            <span class="title-bold">{% trans "Gebelik Deneyiminde" %}
+                            </span>
+                            <br>
+                            <span class="title-normal">{% trans "Anne ve Bebeğine Özel Çözümlerimiz" %}</span>
+                        </h2>
+                    </div>
+                    <!-- End Section Content -->
+
+                    <!-- Start Emergency Call Box -->
+                    <div class="emergency-call-box">
+                        <div class="content text-center">
+                            <h4 class="title">
+                                {% trans "Jineart Çağrı Merkezi" %}
+                                <a href="tel:{% include "variables/phone-link.html" %}">{% include "variables/phone-display.html" %}</a>
+                            </h4>
+                            <a href="{% url 'home' %}#contact" class="icon-space-left">
+                                {% trans "Şimdi Randevu Oluştur" %}
+                                <i class="icofont-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Eed Emergency Call Box -->
+                </div>
+            </div>
+            <!-- Start Cases Area -->
+            <div class="cases-area">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Start Cases Slider -->
+                        <div class="cases-slider default-slider-nav pos-relative">
+                            <!-- Slider main container -->
+                            <div class="swiper-container">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    {% for medicalunit in medicalunits %}
+                                    <!-- Start Cases Single Item -->
+                                    <div class="cases-slider-single-item swiper-slide">
+                                        <a href="" class="image img-responsive text-center">
+                                            <img src="{{ medicalunit.image.url }}" alt="{{ medicalunit.title }}">
+                                        </a>
+                                        <div class="content text-center">
+                                            <h4 class="title">{{ medicalunit.title }}</h4>
+                                            <a href="{% url 'home' %}#contact" class="btn btn-sm btn-light-pink">{% trans "İletişime Geç" %}</a>
+                                        </div>
+                                    </div>
+                                    <!-- End Cases Single Item -->
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <!-- End Cases Slider -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Cases Area -->
+        </div>
+    </div>
+</div>
+<!-- ...::: End Cases Display Section :::... -->

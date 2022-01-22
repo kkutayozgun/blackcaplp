@@ -1,0 +1,87 @@
+{% load i18n %}
+<div class="book-form ">
+    <form class="default-form-group" action="{% url 'send_message' %}" method="post">
+        {% csrf_token %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} text-dark">
+                    {{ message|safe }}
+                </div>
+            {% endfor %}
+            <br>
+        {% endif %}
+        <div class="row mb-n20">
+            <div class="col-12 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-white">
+                    <input type="text" placeholder="{% trans 'Adınız / Soyadınız' %}" name="full_name" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+            </div>
+            <div class="col-12 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-white">
+                    <input type="text" placeholder="{% trans 'Telefon Numaranız' %}" name="phone" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+            </div>
+            <div class="col-12 col-sm-6 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-white">
+                    <select name="treatment-choice" required>
+                        <option value="">{% trans 'Tedavi Tercihi' %}</option>
+                        <option value="Genel Jinekoloji">{% trans 'Genel Jinekoloji' %}</option>
+                        <option value="Perinatoloji">{% trans 'Perinatoloji' %}</option>
+                        <option value="Gebelik Takibi">{% trans 'Gebelik Takibi' %}</option>
+                        <option value="Ultrason">{% trans 'Ultrason' %}</option>
+                        <option value="Ebe Hizmetleri">{% trans 'Ebe Hizmetleri' %}</option>
+                        <option value="Laboratuvar Hizmetleri">{% trans 'Laboratuvar Hizmetleri' %}</option>
+                        <option value="Beslenme ve Diyet">{% trans 'Beslenme ve Diyet' %}</option>
+                    </select>
+                </div>
+                <!-- End From Group SingleItem  -->
+            </div>
+            <div class="col-12 col-sm-6 mb-20">
+                <!-- Start From Group SingleI tem  -->
+                <div class="default-form-group-single-item border-white">
+                    <input name="email" type="email" placeholder="{% trans 'E-mail' %}" required>
+                </div>
+                <!-- End From Group SingleItem  -->
+            </div>
+            <div class="col-12 mb-20">
+                <div class="default-form-group-single-item border-white">
+                    <textarea name="contact-method" rows="4" placeholder="{% trans 'Bize nereden ulaştınız?' %}"
+                              required></textarea>
+                </div>
+            </div>
+
+            <div class="col-12 mb-20">
+                <div class="form-group">
+                    <div class="form-check">
+                        <input type="checkbox" name="kvkkk" required class="form-check-input border-white">
+                        <label class="form-check-label text-white text-start">
+                            {% blocktrans %}
+                                Lütfen KVKK kapsamında kişisel verilerinizi Black Cap ile paylaştığınızı
+                                onaylayınız.
+                                Gizlilik uygulamalarımız hakkında bilgi için web sitemizdeki
+                                <a class="text-white" href="https://theblackcapmedia.com/aydinlatma-metni/"
+                                   target="_blank">KVKK Aydınlatma Metni</a> sayfamızı
+                                ziyaret edebilirsiniz.
+                            {% endblocktrans %}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="submit-btn text-center">
+            <button type="submit" class="btn btn-lg btn-default btn-animate icon-space-left">
+                <span>
+                    {% trans "Gönder" %}
+                    <i class="icofont-double-right"></i>
+                </span>
+            </button>
+        </div>
+    </form>
+</div>

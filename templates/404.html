@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block meta %}
+    <title>Jineart 404!</title>
+{% endblock %}
+
+{% block content %}
+<!-- ...::: Start Breadcrumb Section :::... -->
+    <div class="breadcrumb-section breadcrumb-bg">
+      <div class="box-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="container text-center">
+                <h2 class="title">{% trans "Sayfa Bulunamadı" %}</h2>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans "Anasayfa" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% trans "Hata" %}</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Start Breadcrumb Shape -->
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-1 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-2 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-3 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-outline breadcrumb-shape-outline-4 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-fill breadcrumb-shape-fill-1 animate-zoom-in-out"></div>
+      <div class="breadcrumb-shape breadcrumb-shape-fill breadcrumb-shape-fill-2 animate-zoom-in-out"></div>
+      <!-- End Breadcrumb Shape -->
+    </div>
+    <!-- ...::: End Breadcrumb Section :::... -->
+
+    <!-- ...::: Start 404 Error Section :::... -->
+    <div class="error-section section-top-gap-200">
+      <div class="box-wrapper">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 ">
+              <div class="error-image">
+                <img class="img-fluid animate-zoom-in-out" src="{% static 'assets/images/background/faq-img.png' %}" alt="">
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 offset-lg-1">
+
+              <div class="error-content text-center">
+                <h2 class="title-display">404</h2>
+                <h3 class="title">{% trans "Üzgünüz" %}, <span>{% trans "Bu sayfa bulunamadı." %}</span></h3>
+                <a href="{% url 'home' %}" class="btn btn-md btn-default-outline btn-animate icon-space-right"><span> <i class="icofont-double-left"></i> {% trans "Anasayfaya dön" %} </span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ...::: Start 404 Error Section :::... -->
+
+{% endblock %}
