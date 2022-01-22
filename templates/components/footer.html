@@ -33,15 +33,17 @@
                         <!-- End Footer About -->
                         <!-- Start Footer Widget -->
                         <div class="footer-top-single-item footer-menu footer-widget">
-                            <h4 class="title">Jineart</h4>
+                            <h4 class="title">{% trans "Black Cap" %}</h4>
 
                             <ul class="footer-nav">
                                 <li><a href="{{ home_url }}#about">{% trans "Hakkımızda" %}</a></li>
-                                <li><a href="{{ home_url }}#perinatoloji">{% trans "Perinatoloji" %}</a></li>
-                                <li><a href="{{ home_url }}#ultrason">{% trans "Ultrason" %}</a></li>
+                                <li><a href="{{ home_url }}#solutions">{% trans "Çözümlerimiz" %}</a></li>
+                                <li><a href="{{ home_url }}#dijital">{% trans "Dijital" %}</a></li>
                                 <li><a href="{{ home_url }}#medical-units">{% trans "Tıbbi Birimler" %}</a></li>
-                                <li><a href="https://www.jineart.com">www.jineart.com</a></li>
-                                <li><a href="https://www.jineart.com/aydinlatma-metni/"
+                                <li><a href="{{ home_url }}#our-services">{% trans "Hizmetlerimiz" %}</a></li>
+                                <li><a href="{{ home_url }}#references">{% trans "Referanslarımız" %}</a></li>
+                                <li><a href="https://theblackcapmedia.com/">theblackcapmedia.com</a></li>
+                                <li><a href="https://theblackcapmedia.com/aydinlatma-metni/"
                                        target="_blank">{% trans "KVKK Aydınlatma Metni" %}</a></li>
                             </ul>
                         </div>
@@ -58,6 +60,12 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="{% include 'variables/twitter_link.html' %}" target="_blank">
+                                        <span class="icon"><i class="icofont-twitter"></i></span>
+                                        <span class="text">Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{% include 'variables/instagram_link.html' %}" target="_blank">
                                         <span class="icon"><i class="icofont-instagram"></i></span>
                                         <span class="text">Instagram</span>
@@ -67,6 +75,12 @@
                                     <a href="{% include 'variables/youtube_link.html' %}" target="_blank">
                                         <span class="icon"><i class="icofont-youtube-play"></i></span>
                                         <span class="text">Youtube</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{% include 'variables/linkedin_link.html' %}" target="_blank">
+                                        <span class="icon"><i class="icofont-linkedin"></i></span>
+                                        <span class="text">Linkedin</span>
                                     </a>
                                 </li>
                             </ul>

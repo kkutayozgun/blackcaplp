@@ -38,3 +38,43 @@ class HomeSeo(TranslatableModel):
 
     def __str__(self):
         return str(self.pk)
+
+
+class DijitalItem(TranslatableModel):
+    translations = TranslatedFields(
+        title=models.CharField(_("Başlık"), max_length=200),
+        text=RichTextField(_("Yazı"), blank=True, null=True)
+    )
+    image = models.ImageField(_("Görsel"), upload_to="dijital", blank=True, null=True)
+
+    class Meta:
+        verbose_name = _('Dijital Görseli')
+        verbose_name_plural = _('Dijital Görselleri')
+
+    def __str__(self):
+        return self.title
+
+
+class ServicesItem(TranslatableModel):
+    translations = TranslatedFields(
+        title=models.CharField(_("Başlık"), max_length=200)
+    )
+    image = models.ImageField(_("Görsel"), upload_to="services", blank=True, null=True)
+
+    class Meta:
+        verbose_name = _('Hizmetlerimiz Görseli')
+        verbose_name_plural = _('Hizmetlerimiz Görseli')
+
+    def __str__(self):
+        return self.title
+
+
+class ReferencesImage(models.Model):
+    image = models.ImageField(_("Görsel"), upload_to="references", blank=True, null=True)
+
+    class Meta:
+        verbose_name = _('Referans Görseli')
+        verbose_name_plural = _('Referans Görseli')
+
+    def __str__(self):
+        return f"{str(self.pk)} - {self.image}"

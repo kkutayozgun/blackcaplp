@@ -7,7 +7,7 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
-    path(r'rosetta/', include('rosetta.urls')),
+    path('rosetta/', include('rosetta.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
 

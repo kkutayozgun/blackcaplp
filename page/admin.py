@@ -1,6 +1,6 @@
 from django.contrib import admin
 from parler.admin import TranslatableAdmin
-from page.models import Keywords, HomeSeo
+from page.models import Keywords, HomeSeo, DijitalItem, ServicesItem, ReferencesImage
 
 SEO_FIELDS = ('seo_title', 'meta_description', 'meta_keywords')
 
@@ -15,3 +15,14 @@ class HomeSeoAdmin(TranslatableAdmin):
     # fields = SEO_FIELDS
 
 
+@admin.register(DijitalItem)
+class DijitalItemAdmin(TranslatableAdmin):
+    pass
+
+@admin.register(ServicesItem)
+class ServicesItemAdmin(TranslatableAdmin):
+    pass
+
+@admin.register(ReferencesImage)
+class ReferencesImageAdmin(admin.ModelAdmin):
+    pass

@@ -1,9 +1,10 @@
 {% load i18n %}
 {% load static %}
+{% load references %}
 
-
+{% get_references_list as references_list %}
 <!-- ...::: Start Doctors Team Display Section :::... -->
-<div id="clinics"
+<div id="references"
      class="doctors-team-display section-inner-padding-200 section-top-gap-200 section-inner-bg pos-relative overflow-hidden">
     <div class="box-wrapper">
         <div class="container">
@@ -11,11 +12,11 @@
                 <div class="col-12">
                     <!-- Start Section Content -->
                     <div class="secton-content section-shape text-center">
-                        <span class="section-tag">{% trans "Klinik" %}</span>
+                        <span class="section-tag">{% trans "Referanslarımız" %}</span>
                         <h2 class="section-title">
-                            <span class="title-bold">Jineart</span>
+                            <span class="title-bold">{% trans "Black Cap Media" %}</span>
                             <br>
-                            <span class="title-normal">{% trans "Kliniği Keşfedin!" %}</span>
+                            <span class="title-normal">{% trans "Dijital - Sosyal & Prodüksiyon Referansları" %}</span>
                         </h2>
                     </div>
                     <!-- End Section Content -->
@@ -31,15 +32,19 @@
                             <div class="swiper-container">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
-                                    {% for clinicsimage in clinicsimage_list %}
+
+                                    {% for reference in references_list %}
                                         <!-- Start Doctors Team Single Item -->
                                         <div class="doctors-team-single-item swiper-slide">
-                                            <a class="images img-responsive">
-                                                <img src="{{ clinicsimage.image.url }}"
+                                            <a href="#referenceImageModal-{{ forloop.counter }}"
+                                               class="images img-responsive" data-bs-toggle="modal"
+                                               data-bs-target="#referenceImageModal-{{ forloop.counter }}">
+                                                <img src="{{ reference.image.url }}"
                                                      alt="">
                                             </a>
                                         </div>
                                         <!-- End Doctors Team Single Item -->
+
                                     {% endfor %}
                                 </div>
                             </div>
@@ -54,12 +59,27 @@
             </div>
             <!-- End Doctors Team Area -->
         </div>
-        <!-- Start Doctor Shape -->
-        <div class="doctor-shape doctor-shape-1"></div>
-        <div class="doctor-shape doctor-shape-2"></div>
-        <div class="doctor-shape doctor-shape-3"></div>
-        <div class="doctor-shape doctor-shape-4"></div>
-        <!-- End Doctor Shape -->
+
+        {% for reference in references_list %}
+            <!-- Modal -->
+            <div class="modal fade" id="referenceImageModal-{{ forloop.counter }}"
+                 tabindex="-1"
+                 aria-labelledby="referenceImageModal-{{ forloop.counter }}"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-body ">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            <div class="text-center">
+                                <img src="{{ reference.image.url }}"
+                                     alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 <!-- ...::: End Doctors Team Display Section :::... -->
