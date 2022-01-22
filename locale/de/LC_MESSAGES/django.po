@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-22 23:34+0300\n"
+"POT-Creation-Date: 2022-01-23 00:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: config/settings/base.py:127
+#: config/settings/base.py:127 config/settings/base.py:151
 msgid "Türkçe"
 msgstr ""
 
@@ -155,18 +155,10 @@ msgstr ""
 
 #: templates/components/contact_form.html:63
 msgid ""
-"\n"
-"                                Lütfen KVKK kapsamında kişisel verilerinizi "
-"Black Cap ile paylaştığınızı\n"
-"                                onaylayınız.\n"
-"                                Gizlilik uygulamalarımız hakkında bilgi için "
-"web sitemizdeki\n"
-"                                <a class=\"text-white\" href=\"https://"
-"theblackcapmedia.com/aydinlatma-metni/\"\n"
-"                                   target=\"_blank\">KVKK Aydınlatma Metni</"
-"a> sayfamızı\n"
-"                                ziyaret edebilirsiniz.\n"
-"                            "
+"Lütfen KVKK kapsamında kişisel verilerinizi Black Cap ile paylaştığınızı "
+"onaylayınız. Gizlilik uygulamalarımız hakkında bilgi için web sitemizdeki <a "
+"class=\"text-white\" href=\"https://theblackcapmedia.com/aydinlatma-metni/\" "
+"target=\"_blank\">KVKK Aydınlatma Metni</a> sayfamızı ziyaret edebilirsiniz."
 msgstr ""
 
 #: templates/components/contact_form.html:81
@@ -244,7 +236,7 @@ msgstr ""
 msgid "Takipte Kalın"
 msgstr ""
 
-#: templates/components/footer.html:79 templates/components/header.html:32
+#: templates/components/footer.html:91 templates/components/header.html:32
 #: templates/components/header.html:114
 msgid "İletişim"
 msgstr ""
@@ -299,9 +291,5 @@ msgid "Dijital - Sosyal & Prodüksiyon Referansları"
 msgstr ""
 
 #: templates/variables/address.html:2
-msgid ""
-"\n"
-"Adres: Suadiye Mah. Plaj Yolu Sk. Plaj Yolu Apt.\n"
-"14/3\n"
-"Kadıköy/İstanbul\n"
+msgid "İnkılap Mah. Küçüksu Cad. Antasya Residence Kat 11 Ümraniye/İstanbul"
 msgstr ""
