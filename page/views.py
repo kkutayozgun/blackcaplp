@@ -16,7 +16,7 @@ def handle_contact_form(request):
     if request.method == 'POST':
         try:
             full_name = request.POST.get('full_name', default="")
-            treatment_choice = request.POST.get('treatment-choice', default="")
+            topic = request.POST.get('contact-topic', default="")
             email = request.POST.get('email', default="")
             phone = request.POST.get('phone', default="")
             contact_method = request.POST.get('contact-method', default="")
@@ -26,7 +26,7 @@ def handle_contact_form(request):
 
             context = {
                 'full_name': full_name,
-                'treatment_choice': treatment_choice,
+                'topic': topic,
                 'email': email,
                 'phone': phone,
                 'contact_method': contact_method,
