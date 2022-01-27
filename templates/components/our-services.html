@@ -19,26 +19,11 @@
                     </div>
                     <!-- End Section Content -->
 
-                    <!-- Start Emergency Call Box -->
-                    <div class="emergency-call-box">
-                        <div class="content text-center">
-
-                            <h4 class="title">
-
-                                <img src="{% static 'assets/images/logo/logo.png' %}" style="width: 50%;" alt="Black Cap">
-                                <a href="tel:{% include "variables/phone-link.html" %}">{% include "variables/phone-display.html" %}</a>
-                            </h4>
-                            <a href="{% url 'home' %}#contact" class="icon-space-left">
-                                {% trans "İletişime Geç" %}
-                                <i class="icofont-double-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Eed Emergency Call Box -->
+                    {% include "components/emergency-call.html" with extra_class="d-none d-md-block" %}
                 </div>
             </div>
             <!-- Start Cases Area -->
-            <div class="cases-area">
+            <div class="cases-area mt-4">
                 <div class="row">
                     <div class="col-12">
                         <!-- Start Cases Slider -->
@@ -47,7 +32,7 @@
                             <div class="swiper-container">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
-                                {% get_ourservices_list as ourservices %}
+                                    {% get_ourservices_list as ourservices %}
                                     {% for service_item in ourservices %}
                                         <!-- Start Cases Single Item -->
                                         <div class="cases-slider-single-item swiper-slide">
@@ -56,8 +41,10 @@
                                             </a>
                                             <div class="content text-center">
                                                 <h4 class="title">{{ service_item.title }}</h4>
+
                                                 <a href="{% url 'home' %}#contact"
-                                                   class="btn btn-sm btn-light-pink">{% trans "İletişime Geç" %}</a>
+                                                   class="btn btn-lg btn-default-outline btn-animate icon-space-left"><span> {% trans "İletişime Geç" %} <i
+                                                        class="icofont-double-right"></i></span></a>
                                             </div>
                                         </div>
                                         <!-- End Cases Single Item -->
@@ -75,6 +62,8 @@
                 </div>
             </div>
             <!-- End Cases Area -->
+
+            {% include "components/emergency-call.html" with extra_class="d-md-none" %}
         </div>
     </div>
 </div>

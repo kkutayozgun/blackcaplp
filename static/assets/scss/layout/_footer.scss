@@ -94,7 +94,7 @@
       }
 
       &:focus {
-        border-color: #029488;
+        border-color: $colorOrange;
       }
     }
 
@@ -105,10 +105,10 @@
       color: $white;
       padding: 10px 26px;
       transition: $baseTransition;
-      border: 2px solid #00b8a9;
+      border: 2px solid $colorOrange;
 
       &:hover {
-        border-color: #029488;
+        border-color: $colorOrange;
       }
     }
   }
@@ -196,7 +196,7 @@
     display: block;
 
     &:hover {
-      color: #00b8a9;
+      color: $colorOrange;
       transform: translateX(10px);
     }
   }
@@ -243,11 +243,11 @@
     }
 
     &:hover {
-      border-color: #00b8a9;
-      color: #00b8a9;
+      border-color: $colorOrange;
+      color: $colorOrange;
 
       .icon::after {
-        background: #00b8a9;
+        background: $colorOrange;
       }
     }
   }
@@ -264,7 +264,7 @@
   }
 
   .icon {
-    color: #00b8a9;
+    color: $colorOrange;
   }
 
   .text {
@@ -274,19 +274,19 @@
 }
 
 .footer-bottom-area {
-  background: #25234a;
+  background: $footerBottomBG;
   padding: 25px 0;
 }
 
 .copyright-text {
-  color: $white;
+  color: $black;
 
   a {
-    color: $white;
+    color: $black;
   }
 
   .mark-color {
-    color: #00b8a9;
+    color: $colorOrange;
   }
 
   .company-site {

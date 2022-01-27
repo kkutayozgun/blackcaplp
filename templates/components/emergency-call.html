@@ -1,0 +1,19 @@
+{% load static %}
+{% load i18n %}
+
+<!-- Start Emergency Call Box -->
+<div class="emergency-call-box {{ extra_class }}">
+    <div class="content text-center mt-5">
+
+        <h4 class="title ">
+            <img src="{% static 'assets/images/logo/logo.png' %}" style="width: 50%;"
+                 alt="Black Cap">
+            <a href="tel:{% include "variables/phone-link.html" %}">{% include "variables/phone-display.html" %}</a>
+        </h4>
+        <a href="{% url 'home' %}#contact" class="icon-space-left">
+            {% trans "İletişime Geç" %}
+            <i class="icofont-double-right"></i>
+        </a>
+    </div>
+</div>
+<!-- Eed Emergency Call Box -->

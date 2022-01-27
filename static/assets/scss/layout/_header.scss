@@ -18,11 +18,37 @@
   }
 }
 
+.header-btn-link {
+    @include breakpoint(large) {
+      margin-right: 40px;
+    }
+    @include breakpoint(xlarge) {
+      margin-right: 40px;
+    }
+    @include breakpoint(xxlarge) {
+      margin-right: 60px;
+    }
+    @include breakpoint(xxxlarge) {
+      margin-right: 80px;
+    }
+  }
+
 .header-nav {
   display: flex;
 
   & > li {
-    margin-right: 20px;
+    @include breakpoint(large) {
+      margin-right: 40px;
+    }
+    @include breakpoint(xlarge) {
+      margin-right: 40px;
+    }
+    @include breakpoint(xxlarge) {
+      margin-right: 60px;
+    }
+    @include breakpoint(xxxlarge) {
+      margin-right: 80px;
+    }
   }
 
   & > li > a {

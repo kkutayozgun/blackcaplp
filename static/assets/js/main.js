@@ -141,10 +141,9 @@
       },
       992: {
         slidesPerView: 3,
-        spaceBetween: 30,
       },
       1400: {
-        spaceBetween: 40,
+        slidesPerView: 3,
       },
     }
   });
