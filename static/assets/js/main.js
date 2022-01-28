@@ -94,6 +94,10 @@
       nextEl: '.cases-slider .swiper-button-next',
       prevEl: '.cases-slider .swiper-button-prev',
     },
+    pagination: {
+      el: '.cases-slider .swiper-pagination',
+      clickable: true,
+    },
     breakpoints: {
 
       0: {
@@ -127,6 +131,10 @@
     navigation: {
       nextEl: '.doctors-team-slider .swiper-button-next',
       prevEl: '.doctors-team-slider .swiper-button-prev',
+    },
+    pagination: {
+      el: '.doctors-team-slider .swiper-pagination',
+      clickable: true,
     },
     breakpoints: {
 
@@ -258,7 +266,6 @@
 
       0: {
         slidesPerView: 1,
-        pagination: false,
         direction: 'horizontal',
       },
       768: {

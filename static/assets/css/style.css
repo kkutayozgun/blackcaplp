@@ -1187,9 +1187,9 @@ input {
   color: #000000;
   line-height: 1;
   transition: all 0.3s ease;
-  opacity: 0;
+  opacity: 1;
   outline: none;
-  visibility: hidden;
+  visibility: visible;
   background: #fff;
 }
 .default-slider-nav .swiper-button-prev:hover::after,
@@ -1199,8 +1199,7 @@ input {
   color: #fff;
 }
 .default-slider-nav .swiper-button-prev {
-  left: 0px;
-  display: none;
+  left: 10px;
 }
 @media (min-width: 992px) {
   .default-slider-nav .swiper-button-prev {
@@ -1228,12 +1227,6 @@ input {
 .default-slider-nav:hover .swiper-button-next::after {
   opacity: 1;
   visibility: visible;
-}
-.default-slider-nav:hover .swiper-button-prev {
-  left: calc(0% - 10px);
-}
-.default-slider-nav:hover .swiper-button-next {
-  right: calc(0% - 10px);
 }
 
 /*Component*/
@@ -2254,9 +2247,38 @@ input {
 }
 
 /*Cases Slider */
+.cases-slider .swiper-pagination {
+  display: flex;
+  top: calc(100% + 40px);
+  left: 50%;
+  flex-direction: row;
+  transform: translateX(-50%);
+}
+.cases-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  outline: none;
+  background: #424246;
+  margin-right: 15px;
+}
+.cases-slider .swiper-pagination-bullet-active {
+  background: #000000;
+}
+.cases-slider .swiper-pagination-bullet:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+@media (min-width: 1400px) {
+  .cases-slider .swiper-pagination-bullet {
+    flex-direction: column;
+    transform: translateY(-50%);
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
 .cases-slider .swiper-button-prev {
-  left: 0px;
-  display: none;
+  left: 10px;
+  display: block;
 }
 @media (min-width: 992px) {
   .cases-slider .swiper-button-prev {
@@ -2273,8 +2295,8 @@ input {
   content: "\eab5";
 }
 .cases-slider .swiper-button-next {
-  right: 0px;
-  display: none;
+  right: 10px;
+  display: block;
 }
 @media (min-width: 992px) {
   .cases-slider .swiper-button-next {
@@ -2458,9 +2480,38 @@ input {
   }
 }
 
+.doctors-team-slider .swiper-pagination {
+  display: flex;
+  top: calc(100% + 40px);
+  left: 50%;
+  flex-direction: row;
+  transform: translateX(-50%);
+}
+.doctors-team-slider .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  outline: none;
+  background: #424246;
+  margin-right: 15px;
+}
+.doctors-team-slider .swiper-pagination-bullet-active {
+  background: #000000;
+}
+.doctors-team-slider .swiper-pagination-bullet:last-child {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+@media (min-width: 1400px) {
+  .doctors-team-slider .swiper-pagination-bullet {
+    flex-direction: column;
+    transform: translateY(-50%);
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
 .doctors-team-slider .swiper-button-prev {
-  left: 0;
-  display: none;
+  left: 10px;
+  display: block;
 }
 @media (min-width: 1400px) {
   .doctors-team-slider .swiper-button-prev {
@@ -2472,8 +2523,8 @@ input {
   content: "\eab5";
 }
 .doctors-team-slider .swiper-button-next {
-  right: 0;
-  display: none;
+  right: 10px;
+  display: block;
 }
 @media (min-width: 1400px) {
   .doctors-team-slider .swiper-button-next {
@@ -3133,7 +3184,7 @@ input {
 .blog-feed-slider .swiper-pagination {
   display: flex;
   flex-direction: column;
-  top: calc(100% + 40px);
+  top: 100%;
   left: 50%;
   flex-direction: row;
   transform: translateX(-50%);

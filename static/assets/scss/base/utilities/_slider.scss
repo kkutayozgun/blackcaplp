@@ -15,9 +15,9 @@
             color: $themeColor;
             line-height: 1;
             transition: all .3s ease;
-            opacity: 0;
+            opacity: 1;
             outline: none;
-            visibility: hidden;
+            visibility: visible;
             background: $white;
             
         }
@@ -30,8 +30,7 @@
     }
     
     .swiper-button-prev{
-        left: 0px;
-        display: none;
+        left: 10px;
         @include breakpoint(large){
             display: flex;
             left: -45px;
@@ -59,11 +58,11 @@
             visibility: visible;
         }
         
-        .swiper-button-prev{
-            left: calc(0% - 10px); 
-        }
-        .swiper-button-next{
-            right: calc(0% - 10px);
-        }
+        //.swiper-button-prev{
+        //    left: calc(0% - 10px);
+        //}
+        //.swiper-button-next{
+        //    right: calc(0% - 10px);
+        //}
     }
 }

@@ -117,9 +117,41 @@
 
 
 .doctors-team-slider {
+    .swiper-pagination {
+    display: flex;
+    top: calc(100% + 40px);
+    left: 50%;
+    flex-direction: row;
+    transform: translateX(-50%);
+
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    outline: none;
+    background: #424246;
+    margin-right: 15px;
+
+    &-active {
+      background: $themeColor;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    @include breakpoint(xxlarge) {
+      flex-direction: column;
+      transform: translateY(-50%);
+      margin-bottom: 15px;
+      margin-right: 0;
+    }
+  }
   .swiper-button-prev {
-    left: 0;
-    display: none;
+    left: 10px;
+    display: block;
 
     @include breakpoint(xxlarge) {
       display: flex;
@@ -132,8 +164,8 @@
   }
 
   .swiper-button-next {
-    right: 0;
-    display: none;
+    right: 10px;
+    display: block;
 
     @include breakpoint(xxlarge) {
       display: flex;
